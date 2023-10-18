@@ -59,7 +59,8 @@ ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", default=ADMIN_PASSWORD)  # 如果�
 if ADMIN_PASSWORD == "":
     ADMIN_PASSWORD = PASSWORD  # 如果ADMIN_PASSWORD为空，则使用PASSWORD
 
-STREAM_FLAG = True  # 是否开启流式推送
+STREAM_FLAG = true  # 是否开启流式推送
+STREAM_FLAG = os.getenv("STREAM_FLAG", default=STREAM_FLAG)  # 是否开启流式推送
 USER_DICT_FILE = "all_user_dict_v3.pkl"  # 用户信息存储文件（包含版本）
 lock = threading.Lock()  # 用于线程锁
 
